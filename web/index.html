@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun飲Lab | 首頁</title>
+    <!-- favicon 可省略不寫 1x=16px,3x=48px -->
+    <!-- <link rel="icon" href="./favicon.ico"> -->
+    <!-- 自訂的CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header id="topBar">
+        <!-- logo區 -->
+        <h1 class="logo">
+            <a href="./index.html">
+                <!-- svg預設會自動寬度100% -->
+                <img src="./images/logo.svg" alt="fun飲LOGO" title="fun飲LOGO" />
+            </a>
+        </h1>
+        <!-- 導覽列 -->
+        <nav class="navigation">
+            <!-- 主選單 -->
+            <ul class="menu">
+                <li><a class="a_story" href="">STORY</a></li>
+                <li><a class="a_menu" href="">MENU</a></li>
+                <li><a class="a_fresh" href="">FRESH</a></li>
+                <li><a class="a_store" href="">STORE</a></li>
+                <li><a class="a_search" href="">SEARCH</a></li>
+            </ul>
+            <ul>
+                <a href="" class="funLab">
+                    <li><img src="images/funLogo.svg" alt="fun飲LOGONav" /></li>
+                    <li>FUN LAB</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="subNavigation">
+        <img src="./images/Union.svg" alt="">
+        <ul class="subMenu">
+            <li><a href="">UP</a></li>
+            <li><a href="">MENU</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">FUN LAB</a></li>
+            <li><a href="">DOWN</a></li>
+        </ul>
+    </nav>
+
+    <!-- 主要內容區 -->
+    <main>
+        <section id="banner">
+            <div class="img-container">
+                <img class="indexPic" src="./images/indexpic.svg" alt="">
+                <img class="goToFunlab" src="./images/gotofunlab.svg" alt="">
+                <div class="wrap">
+                    <canvas id="bubble"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <div style="height: 100vh;"></div>
+
+        <section id="drink">
+            <div id="drinkContent">
+                <header class="title">
+                    <h2>DRINK</h2>
+                    <h3>Popularity Ranking</h3>
+                </header>
+                <div class="content">
+                    <p>飲料熱門排行榜 <br> 你喜愛的飲品有上榜嗎 ?</p>
+                </div>
+                <div>
+                    <a href="">VIEW ALL</a>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="feature">
+            <div id="featureContent">
+                <header class="title">
+                    <h2>#放飲多重選擇</h2>
+                </header>
+                <div class="content">
+                    <p>無論是經典風味、創意特調或清新果茶，在「放飲」菜單應盡有，我們相信每個人都應該享受屬於自己的特色飲品，最貼心的飲品服務。</p>
+                </div>
+                <div>
+                    <a href="">ABOUT US</a>
+                    <img src="" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="DIY">
+            <div id="DIYContent">
+                <header class="title">  
+                    <h2>FUN LAB</h2>
+                    <h3>讓飲品變得獨一無二</h3>        
+                </header> 
+                <div class="content">
+                    <a href="">1. Make</a>
+                    <a href="">2. share</a>
+                    <a href="">3. drink</a>
+                </div>
+                <div>
+                    <a href="">製作專屬飲品</a>
+                    <img src="" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <section id="dropText">
+            <div>
+                <p>Fabulous Drink</p>
+            </div>
+        </section>
+    </main> 
+    
+    <!-- 頁尾區 -->
+    <footer id="footer">
+        <div class="logoFooter">
+            <img class="logoFooterImg" src="./images/funLogo.svg" alt="fun飲LOGONav" />
+            <img class="logoFooterText" src="./images/funLogoText.svg" alt="fun飲LOGO" title="fun飲LOGO" />
+        </div>
+        <div class="articleFooter">
+            <ul>
+                <li>
+                    <p>CONTACT</p>
+                </li>
+                <li>
+                    <p>PEIVACY POLICY</p>
+                </li>
+                <li>
+                    <p>放飲 FUN LAB</p>
+                    <p>100台北市中正區濟南路一段321號</p>
+                    <p>TEL 02-3535-3466</p>
+                </li>
+                <li class="iconFooter">
+                    <img src="./images/icon-ig-hover.svg" alt="" />
+                    <img src="./images/icon-line-hover.svg" alt="" />
+                </li>
+                <li>
+                    <p>©2024 放飲, All Rights Reserved</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- 程式 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
