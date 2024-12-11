@@ -1,0 +1,401 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Notable&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+/* RESET  END*/
+@keyframes goToFunlabAnime {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* 頁首 */
+#topBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 70px 0 70px;
+  font-family: "Mulish";
+  font-size: 1rem;
+  font-weight: 800;
+}
+#topBar .logo {
+  min-width: 164px;
+}
+#topBar .navigation {
+  display: flex;
+}
+#topBar .navigation .menu {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2.5px rgba(0, 0, 0, 0.8) solid;
+  border-radius: 30px;
+  padding: 0 20px 0 20px;
+}
+#topBar .navigation .menu a {
+  position: relative;
+  margin: 0px;
+  padding: 0px 20px 0px 20px;
+  transition: 0.2s;
+}
+#topBar .navigation .menu .a_story::after {
+  content: "關於放飲";
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  font-size: 0.875rem;
+  color: transparent;
+  transition: color 0.2s;
+}
+#topBar .navigation .menu .a_story:hover::after {
+  color: #000000;
+}
+#topBar .navigation .menu .a_story:hover {
+  color: transparent;
+}
+#topBar .navigation .menu .a_menu::after {
+  content: "飲品菜單";
+  position: absolute;
+  left: 18%;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  font-size: 0.875rem;
+  color: transparent;
+  transition: color 0.2s;
+}
+#topBar .navigation .menu .a_menu:hover::after {
+  color: #000000;
+}
+#topBar .navigation .menu .a_menu:hover {
+  color: transparent;
+}
+#topBar .navigation .menu .a_fresh::after {
+  content: "嚴選食材";
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  font-size: 0.875rem;
+  color: transparent;
+  transition: color 0.2s;
+}
+#topBar .navigation .menu .a_fresh:hover::after {
+  color: #000000;
+}
+#topBar .navigation .menu .a_fresh:hover {
+  color: transparent;
+}
+#topBar .navigation .menu .a_store::after {
+  content: "門市據點";
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  font-size: 0.875rem;
+  color: transparent;
+  transition: color 0.2s;
+}
+#topBar .navigation .menu .a_store:hover::after {
+  color: #000000;
+}
+#topBar .navigation .menu .a_store:hover {
+  color: transparent;
+}
+#topBar .navigation .menu .a_search::after {
+  content: "訂單查詢";
+  position: absolute;
+  left: 24%;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  font-size: 0.875rem;
+  color: transparent;
+  transition: color 0.2s;
+}
+#topBar .navigation .menu .a_search:hover::after {
+  color: #000000;
+}
+#topBar .navigation .menu .a_search:hover {
+  color: transparent;
+}
+#topBar .navigation .funLab {
+  margin-left: 20px;
+  width: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px rgba(0, 0, 0, 0.8) solid;
+  border-radius: 30px;
+  background-color: #FFF55F;
+  transition: 0.3s;
+}
+#topBar .navigation .funLab img {
+  width: 43px;
+}
+#topBar .navigation .funLab:hover {
+  background-color: #FFFFFF;
+  color: #FFF55F;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.subNavigation {
+  position: fixed;
+  top: 25%;
+  left: 50px;
+  z-index: 1000;
+  display: flex;
+  width: 130px;
+}
+.subNavigation img {
+  width: 43px;
+  margin-right: 8px;
+}
+.subNavigation .subMenu {
+  padding-top: 45px;
+}
+.subNavigation .subMenu a {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 44px;
+  font-family: "Mulish";
+  font-size: 0.75rem;
+  font-weight: 900;
+  font-style: italic;
+}
+.subNavigation .subMenu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  /* 初始寬度為 0 */
+  height: 2px;
+  background-color: #000;
+  transition: width 0.2s ease;
+  /* 添加過渡效果 */
+}
+.subNavigation .subMenu a:hover::after {
+  width: 100%;
+  /* 當滑鼠移到標題時，底線展開至全寬 */
+}
+
+/*主要內容區*/
+/* banner輪播區 */
+#banner-wrap .banner {
+  display: flex;
+  padding-top: 130px;
+  height: 100%;
+  min-height: 370px;
+}
+
+/*側邊導覽列*/
+.nav > div {
+  margin-top: -26px;
+  position: absolute;
+  top: 50%;
+  color: #cdcbcd;
+}
+
+.nav i {
+  font-size: 52px;
+}
+
+.nav .prev {
+  left: -30px;
+}
+
+.nav .next {
+  right: -30px;
+}
+
+/*菜單區*/
+.listbox {
+  display: none;
+}
+
+.listbox.active {
+  display: block;
+}
+
+.menu {
+  z-index: 999;
+  /*分組頁籤*/
+}
+.menu h2 {
+  display: flex;
+  justify-content: center;
+  padding: 62px;
+}
+.menu h2 img {
+  width: 100%;
+  max-width: 290px;
+}
+.menu .drinkListTab ul {
+  display: flex;
+  justify-content: center;
+}
+.menu .drinkListTab ul li {
+  background-color: #ffffff;
+  border: 3px solid #D9D9D9;
+  border-radius: 50px;
+  font-size: 1.375rem;
+  font-weight: bold;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.menu .drinkListTab ul li .tab-btn {
+  font-size: 22px;
+  padding: 10px 20px;
+  background: transparent;
+}
+.menu .drinkListTab ul li .tab-btn:hover {
+  background-color: #e8e8e8;
+  color: #000;
+  border-radius: 50px;
+}
+.menu .drinkListTab ul li .tab-btn.active {
+  font-size: 1.375rem;
+  background-color: #5082FF;
+  border-radius: 50px;
+  color: #ffffff;
+}
+.menu #graph-sun-pink {
+  width: 90px;
+  position: absolute;
+  left: 300px;
+  bottom: -50px;
+  transform: rotate(30deg);
+}
+.menu #graph-line-yellow {
+  width: 160px;
+  position: absolute;
+  top: 1490px;
+  right: 100px;
+  transform: rotate(-20deg);
+}
+.menu #graph-line-pink {
+  width: 320px;
+  position: absolute;
+  top: 1000px;
+  left: -40px;
+  transform: rotate(30deg);
+}
+
+/*分組商品區*/
+.productlist {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.productlist .product {
+  margin: 40px;
+}
+.productlist .product h2 {
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 頁尾區 */
+#footer {
+  display: flex;
+  /* 主軸方向:水平 */
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 25px 70px;
+  background-color: #5082FF;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  font-family: "Noto Sans";
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.05rem;
+}
+#footer .logoFooter .logoFooterImg {
+  width: 80px;
+  padding: 5px 0px;
+}
+#footer .logoFooter .logoFooterText {
+  width: 200px;
+  padding-bottom: 15px;
+}
+#footer .articleFooter li {
+  margin-bottom: 15px;
+}
+#footer .articleFooter li p {
+  margin-bottom: 5px;
+}
+#footer .articleFooter .iconFooter {
+  display: flex;
+}
+#footer .articleFooter .iconFooter img {
+  width: 30px;
+  margin-right: 5px;
+}
+
+section {
+  height: 100vh;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */
