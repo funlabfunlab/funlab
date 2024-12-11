@@ -1,0 +1,27 @@
+@keyframes goToFunlabAnime{
+    100%{transform: rotate(360deg);}
+}
+
+//出現
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+//消失
+@keyframes hide {
+    from {
+        opacity: 1;
+        display: flex;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
