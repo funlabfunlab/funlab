@@ -1,0 +1,371 @@
+@charset "UTF-8";
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.2;
+}
+
+/* 重置標題字重 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置符號清單 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連結 */
+a {
+  display: block;
+  /* 將a預設inline改為block，才能設定間距及寬高 */
+  color: #666;
+  text-decoration: none;
+}
+
+/* 頁首 */
+#topBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 70px 0 70px;
+  font-family: "Mulish";
+  font-size: 1rem;
+  font-weight: 800;
+  z-index: 99;
+}
+
+#topBar .logo {
+  min-width: 164px;
+}
+
+#topBar .navigation {
+  display: flex;
+}
+
+#topBar .navigation .menu {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2.5px rgba(0, 0, 0, 0.8) solid;
+  border-radius: 30px;
+  padding: 0 20px 0 20px;
+}
+
+#topBar .navigation .menu a {
+  margin: 0px;
+  padding: 0px 20px 0px 20px;
+  transition: 0.2s;
+}
+
+#topBar .navigation .menu a:hover {
+  color: #5082FF;
+}
+
+#topBar .navigation .funLab {
+  margin-left: 20px;
+  width: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px rgba(0, 0, 0, 0.8) solid;
+  border-radius: 30px;
+  background-color: #FFF55F;
+}
+
+#topBar .navigation .funLab img {
+  width: 43px;
+}
+
+.subNavigation {
+  position: fixed;
+  top: 25%;
+  left: 50px;
+  display: flex;
+  width: 130px;
+}
+
+.subNavigation img {
+  width: 43px;
+  margin-right: 8px;
+}
+
+.subNavigation .subMenu {
+  padding-top: 45px;
+}
+
+.subNavigation .subMenu a {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 44px;
+  font-family: "Mulish";
+  font-size: 0.75rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.subNavigation .subMenu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  /* 初始寬度為 0 */
+  height: 2px;
+  background-color: #000;
+  transition: width 0.2s ease;
+  /* 添加過渡效果 */
+}
+
+.subNavigation .subMenu a:hover::after {
+  width: 100%;
+  /* 當滑鼠移到標題時，底線展開至全寬 */
+}
+
+
+/* 原料標題區 */
+header .page-title {
+  color: #5082FF;
+  font-size: 96px;
+  text-align: center;
+  margin: 160px 0 0 0;
+
+}
+
+/* 四個分組頁籤區 */
+
+
+/* 內容區 */
+.ingredient-list {
+  display: flex;
+  align-items: center;
+  /* 水平置中 */
+
+  flex-direction: column;
+  /* 垂直排列子元素 */
+}
+
+.tea,
+.milk,
+.fruit,
+.topping {
+  /* max-width: 814px;
+  width: 76%;
+  margin-left: auto;
+  margin-left: auto; */
+
+  width: 814px;
+  /* 問一下大家要不要改寬一點 */
+  display: flex;
+  justify-content: space-between;
+  /* 小的們先用均分的 如果排大顆的會有問題再改 */
+  flex-wrap: wrap;
+  /* 換行 */
+  position: relative;
+  margin: 110px 0;
+}
+
+.showImg-left {
+  width: 178px;
+  height: 292px;
+  position: relative;
+  /* 給decorate定位用的 */
+}
+
+.showImg-left figure {
+  clip-path: circle(50% at 50% 50%);
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  left: -100px;
+  z-index: 1;
+}
+
+.decorate-left {
+  font-size: 79px;
+  font-weight: bold;
+  color: #97E070;
+  -webkit-text-stroke: 1.5px #000;
+  position: absolute;
+  left: -80px;
+  z-index: 2;
+}
+
+.decorate-left figure {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: -60px;
+  top: -60px;
+}
+
+.showImg-right {
+  width: 178px;
+  height: 292px;
+  position: relative;
+  /* 給decorate定位用的 */
+}
+
+.showImg-right figure {
+  clip-path: circle(50% at 50% 50%);
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  right: -100px;
+}
+
+.decorate-right {
+  font-size: 79px;
+  font-weight: bold;
+  color: #fff;
+  -webkit-text-stroke: 1.5px #000;
+  position: absolute;
+  right: -80px;
+  z-index: 2;
+}
+
+.decorate-right figure {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: -60px;
+  top: -60px;
+}
+
+.ingredient {
+  width: 178px;
+  display: flex;
+  flex-direction: column;
+  /* 垂直排列子元素 */
+  align-items: center;
+  /* 水平置中 */
+  text-align: center;
+  /* 讓文字也置中 */
+  margin: 40px 0;
+
+}
+
+.ingredient figure {
+  clip-path: circle(50% at 50% 50%);
+  height: 136px;
+  width: 136px;
+}
+
+.ingredient h2 {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 18px 0;
+}
+
+.tea .ingredient p {
+  font-size: 18px;
+  line-height: 28px;
+}

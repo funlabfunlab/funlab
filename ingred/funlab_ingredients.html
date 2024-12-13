@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fun飲Lab | 原料介紹</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+<!-- 至頂按鈕 -->
+<button onclick="topFunction()" id="myBtn" title="Gotop"><img src="./image/top (1).svg"></button>
+
+<script>
+  window.onscroll = scrollFunction; //每當畫面捲動觸發一次
+
+function scrollFunction() { 
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop >300) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}//網頁捲動超過300pixel就會跑出來 display設定成block 跑回上面就隱藏。
+
+// 重置scrollTop這個變數的值
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+
+<!-- 泡泡 -->
+<div class="wrap">
+  <canvas id="bubble"></canvas>
+</div>
+
+<!-- 頁首區 -->
+<header id="topBar">
+  <!-- logo區 -->
+  <h1 class="logo">
+      <a href="./index.html">
+          <!-- svg預設會自動寬度100% -->
+          <img src="./images/funlogoText.svg" alt="fun飲LOGO" title="fun飲LOGO" />
+      </a>
+  </h1>
+  <div class="navbar">
+      <!-- 漢堡按鈕 -->
+      <button class="hamburger">
+          <svg class="Rotate" viewBox="0 0 100 100" width="80"
+              onclick="this.classList.toggle('active')">
+              <path class="line top"
+                  d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+              <path class="line middle" d="m 30,50 h 40" />
+              <path class="line bottom"
+                  d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+          </svg>
+
+      </button>
+      <!-- 導覽列 -->
+      <nav class="navigation">
+          <!-- 主選單 -->
+          <ul class="menu">
+              <li><a class="a_story" href="">STORY</a></li>
+              <li><a class="a_menu" href="">MENU</a></li>
+              <li><a class="a_fresh" href="">FRESH</a></li>
+              <li><a class="a_store" href="">STORE</a></li>
+              <li><a class="a_search" href="">SEARCH</a></li>
+          </ul>
+          <ul>
+              <a href="" class="funLab">
+                  <li><img src="images/funLogo.svg" alt="fun飲LOGONav" /></li>
+                  <li>FUN LAB</li>
+              </a>
+          </ul>
+      </nav>
+  </div>
+</header>
+<header>
+  <h1 class="page-title">INGERDIENT</h1>
+</header>
+
+<body>
+  <!-- 分組頁籤 -->
+  <div class="drinkList">
+    <div class="drinkListTab">
+      <div><a href="#tea">放飲純茶</a></div>
+      <div><a href="#milk">濃醇奶類</a></div>
+      <div><a href="#fruit">鮮調果粒</a></div>
+      <div><a href="#topping">FUN新嚼感</a></div>
+    </div>
+  </div>
+
+  <main class="ingredient-list">
+    <!-- 純茶 -->
+    <section id="tea" class="tea">
+      <div class="showImg-left">
+        <figure><img src="./image/tea/big-Assam.jpg" alt=""></figure>
+      </div>
+      <div class="decorate-left">
+        <p>茶</p>
+        <figure><img src="./image/graph-TeaCircle.png" alt=""></figure>
+      </div>
+
+      <div class="ingredient">
+        <figure><img src="./image/tea/teacolor-1.png" alt=""></figure>
+        <h2>阿薩姆紅茶</h2>
+        <p>帶天然麥芽香，茶色深紅，適合搭配鮮奶。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/tea/teacolor-2.png" alt=""></figure>
+        <h2>紅玉紅茶</h2>
+        <p>帶薄荷與肉桂香，紅茶中的精品，滋味層次豐富。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/tea/teacolor-3.png" alt=""></figure>
+        <h2>錫蘭紅茶</h2>
+        <p>帶柑橘香氣，口感清爽甘甜，風味清新怡人。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/tea/top-view-arrangement-with-cups-tea.jpg" alt=""></figure>
+        <h2>舞鶴紅茶</h2>
+        <p>香氣馥郁，入口甘醇細膩，餘韻悠長。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/tea/top-view-arrangement-with-cups-tea.jpg" alt=""></figure>
+        <h2>烏龍茶</h2>
+        <p>香氣濃郁，茶湯金黃透亮，入口回甘。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/tea/top-view-arrangement-with-cups-tea.jpg" alt=""></figure>
+        <h2>東方美人茶</h2>
+        <p>蜜果香濃郁，茶湯琥珀色澤，口感甘醇。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+        <h2>四季春</h2>
+        <p>香氣清雅、花香濃郁，滋味清爽甘醇。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+        <h2>金萱</h2>
+        <p>滑順奶香濃郁茶湯甘甜圓潤，適合冷泡。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+        <h2>玉露</h2>
+        <p>帶海藻與草本香氣，茶湯翠綠，滋味鮮甜醇厚。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+        <h2>煎茶</h2>
+        <p>帶草香與花香，清新鮮甜，茶湯清澈。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+        <h2>碧螺春</h2>
+        <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+      </div>
+    </section>
+    <!-- 奶類 -->
+    <section id="milk" class="milk">
+      <div class="ingredient">
+        <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+        <h2>小農鮮奶</h2>
+        <p>屏東回鄉青年友善畜牧，每日清晨直送。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+        <h2>豆漿</h2>
+        <p>每天新鮮現製，自然的豆香與純正口感。</p>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+        <h2>燕麥奶</h2>
+        <p>來自有機燕麥，細膩滑順，富含纖維與營養。</p>
+      </div>
+      <div class="showImg-right">
+        <figure><img src="./image/fruit/big-berry.jpg" alt=""></figure>
+      </div>
+      <div class="decorate-right">
+        <p>奶</p>
+        <figure><img src="./image/graph-TeaCircle.png" alt=""></figure>
+      </div>
+      <div class="ingredient">
+        <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+        <h2>堅果奶</h2>
+        <p>精選優質堅果，堅果香濃郁，滿滿能量與滋養。</p>
+      </div>
+      <!-- 水果 -->
+
+      <section id="fruit" class="fruit">
+        <div class="showImg-left">
+          <figure><img src="./image/fruit/big-lemon.jpg" alt=""></figure>
+        </div>
+        <div class="decorate-left">
+          <p>果</p>
+          <figure><img src="./image/graph-TeaCircle.png" alt=""></figure>
+        </div>
+
+        <div class="ingredient">
+          <figure><img src="./image/fruit/small.lemon.jpg" alt=""></figure>
+          <h2>檸檬果肉</h2>
+          <p>屏東九如檸檬，酸香宜人，富含維他命C。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/fruit/small-passionfruit.jpg" alt=""></figure>
+          <h2>百香果</h2>
+          <p>酸甜濃郁，熱帶風味十足，為茶飲增添活力。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/fruit/small-peach.jpg" alt=""></figure>
+          <h2>蜜桃果肉</h2>
+          <p>香甜柔和，果肉滑順，甜中帶微酸感。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/fruit/small-berry.jpg" alt=""></figure>
+          <h2>蔓越莓粒</h2>
+          <p>酸甜中帶微澀，點綴茶飲同時帶來清新果味感受。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/fruit/small-grape.jpg" alt=""></figure>
+          <h2>葡萄果肉</h2>
+          <p>高雄六龜葡萄，果肉飽滿多汁。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/fruit/small-plum.jpg" alt=""></figure>
+          <h2>梅肉</h2>
+          <p>酸爽美味，搭配純茶的最佳選擇。</p>
+        </div>
+        <div class="ingredient">
+
+        </div>
+
+      </section>
+      <!-- 配料 -->
+      <section id="topping" class="topping">
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-boba.jpg" alt=""></figure>
+          <h2>波霸</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-bubble.jpg" alt=""></figure>
+          <h2>珍珠</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-grassjelly.jpg" alt=""></figure>
+          <h2>仙草</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="showImg-right">
+          <figure><img src="./image/topping/big-boba.jpg" alt=""></figure>
+        </div>
+        <div class="decorate-right">
+          <p>料</p>
+          <figure><img src="./image/graph-TeaCircle.png" alt=""></figure>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-cocona.jpg" alt=""></figure>
+          <h2>椰果</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-soypudding.jpg" alt=""></figure>
+          <h2>豆花</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-teajelly.jpg" alt=""></figure>
+          <h2>茶凍</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-almondjelly.jpg" alt=""></figure>
+          <h2>杏仁凍</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-jellycake.jpg" alt=""></figure>
+          <h2>粉粿</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-taro.jpg" alt=""></figure>
+          <h2>芋圓</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="ingredient">
+          <figure><img src="./image/topping/small-pudding.jpg" alt=""></figure>
+          <h2>布丁</h2>
+          <p>鮮爽回甘，茶湯清澈翠綠，帶花果香氣，綠茶中的上乘佳品。</p>
+        </div>
+        <div class="ingredient">
+
+        </div>
+
+      </section>
+
+  </main>
+  
+  <!-- 頁尾區 -->
+  <footer id="footer">
+    <div class="logoFooter">
+      <img class="logoFooterImg" src="images/funLogo.svg" alt="fun飲LOGONav" />
+      <img class="logoFooterText" src="./images/funLogoText.svg" alt="fun飲LOGO" title="fun飲LOGO" />
+    </div>
+    <div class="articleFooter">
+      <ul>
+        <li>
+          <p>CONTACT</p>
+        </li>
+        <li>
+          <p>PEIVACY POLICY</p>
+        </li>
+        <li>
+          <p>放飲 FUN LAB</p>
+          <p>100台北市中正區濟南路一段321號</p>
+          <p>TEL 02-3535-3466</p>
+        </li>
+        <li class="iconFooter">
+          <img src="images/icon-ig-hover.svg" alt="" />
+          <img src="images/icon-line-hover.svg" alt="" />
+        </li>
+        <li>
+          <p>©2024 放飲, All Rights Reserved</p>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
