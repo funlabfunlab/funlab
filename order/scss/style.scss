@@ -1,0 +1,600 @@
+@use "reset";
+@use "variables" as *;
+@use "function" as *;
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Notable&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+/* 頁首 */
+#topBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 70px 0 70px;
+    font-family: $font-family-en;
+    font-size: $font-size-16;
+    font-weight: $font-weight-bold;
+
+    .logo {
+        min-width: 164px;
+    }
+
+    .navigation {
+
+        display: flex;
+
+        .menu {
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2.5px rgba(0, 0, 0, 0.8) solid;
+            border-radius: 30px;
+            padding: 0 20px 0 20px;
+
+            a {
+                position: relative;
+                margin: 0px;
+                padding: 0px 20px 0px 20px;
+                transition: $speed-fast;
+            }
+
+            .a_story::after {
+                content: "關於放飲";
+                position: absolute;
+                left: 20%;
+                top: 10%;
+                width: 100%;
+                height: 100%;
+                font-size: 0.875rem;
+                color: transparent;
+                transition: color 0.2s;
+            }
+
+            .a_story:hover::after {
+                color: $color-sub-black;
+            }
+
+            .a_story:hover {
+                color: transparent;
+            }
+
+            .a_menu::after {
+                content: "飲品菜單";
+                position: absolute;
+                left: 18%;
+                top: 10%;
+                width: 100%;
+                height: 100%;
+                font-size: 0.875rem;
+                color: transparent;
+                transition: color 0.2s;
+            }
+
+            .a_menu:hover::after {
+                color: $color-sub-black;
+            }
+
+            .a_menu:hover {
+                color: transparent;
+            }
+
+            .a_fresh::after {
+                content: "嚴選食材";
+                position: absolute;
+                left: 20%;
+                top: 10%;
+                width: 100%;
+                height: 100%;
+                font-size: 0.875rem;
+                color: transparent;
+                transition: color 0.2s;
+            }
+
+            .a_fresh:hover::after {
+                color: $color-sub-black;
+            }
+
+            .a_fresh:hover {
+                color: transparent;
+            }
+
+            .a_store::after {
+                content: "門市據點";
+                position: absolute;
+                left: 20%;
+                top: 10%;
+                width: 100%;
+                height: 100%;
+                font-size: 0.875rem;
+                color: transparent;
+                transition: color 0.2s;
+            }
+
+            .a_store:hover::after {
+                color: $color-sub-black;
+            }
+
+            .a_store:hover {
+                color: transparent;
+            }
+
+            .a_search::after {
+                content: "訂單查詢";
+                position: absolute;
+                left: 24%;
+                top: 10%;
+                width: 100%;
+                height: 100%;
+                font-size: 0.875rem;
+                color: transparent;
+                transition: color 0.2s;
+            }
+
+            .a_search:hover::after {
+                color: $color-sub-black;
+            }
+
+            .a_search:hover {
+                color: transparent;
+            }
+
+        }
+
+        .funLab {
+            margin-left: 20px;
+            width: 145px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2.5px rgba(0, 0, 0, 0.8) solid;
+            border-radius: 30px;
+            background-color: $color-sub-yellow;
+            transition: 0.3s;
+
+            img {
+                width: 43px;
+            }
+
+            &:hover {
+                background-color: $color-primary-white;
+                color: $color-sub-yellow;
+                text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            }
+        }
+    }
+}
+
+//電腦斷點 => 漢堡按鈕消失
+@media ($mediaLg) {
+    #topBar {
+        .hamburger {
+            display: none;
+        }
+    }
+}
+
+//平板斷點 => 加上漢堡按鈕以及更改位置
+@media ($mediaMd) {
+    #topBar {
+        align-items: start;
+        padding: 25px;
+
+        .logo {
+            margin-top: 13px; //對齊漢堡按鈕
+            margin-left: 15px;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: column; //調整直排
+            align-items: flex-end;
+
+            .hamburger {
+                /*  修改button預設樣式  */
+                background-color: transparent;
+                border: none;
+
+                //漢堡按鈕設計
+                .Rotate.active {
+                    transform: rotate(45deg);
+                }
+
+                .line {
+                    fill: none;
+                    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+                    stroke: #000;
+                    stroke-width: 5.5;
+                    stroke-linecap: round;
+                }
+
+                .top {
+                    stroke-dasharray: 40 160;
+                }
+
+                .middle {
+                    stroke-dasharray: 40 142;
+                    transform-origin: 50%;
+                    transition: transform 400ms;
+                }
+
+                .bottom {
+                    stroke-dasharray: 40 85;
+                    transform-origin: 50%;
+                    transition: transform 400ms, stroke-dashoffset 400ms;
+                }
+
+                .active .top {
+                    stroke-dashoffset: -64px;
+                }
+
+                .active .middle {
+                    //stroke-dashoffset: -20px;
+                    transform: rotate(90deg);
+                }
+
+                .active .bottom {
+                    stroke-dashoffset: -64px;
+                }
+
+            }
+
+            .navigation {
+                display: none; //隱藏
+                flex-direction: column; //垂直排
+                align-items: center;
+                align-items: end; //原本置右
+                border-radius: 10px;
+
+                //直接寫在ccs中,一開始也不會出現,因為有設定display:none;
+                //動畫慢慢消失
+                animation: hide 2s both;
+
+                .menu {
+                    flex-direction: column; //改成垂直排  
+                    padding: 8px;
+                    margin-bottom: 20px;
+
+                    a {
+                        margin: 10px;
+                    }
+                }
+
+                // 動態出現navigation
+                //慢慢出現
+                &.show {
+                    display: flex;
+                    animation: show 0.4s both;
+                }
+            }
+        }
+    }
+}
+
+
+/* 主要內容區 */
+.title {
+    h1 {
+        font-size: $font-size-48;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+/*共用分類區*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+table {
+    font-family: $font-family-ch;
+}
+
+.detail {
+    display: flex;
+}
+
+
+/*當前訂單*/
+.now {
+    display: block;
+    padding: 60px;
+    margin: 0 200px;
+    height: 100%;
+    font-family: $font-family-ch;
+
+    h2 {
+        font-size: $font-size-32;
+        font-weight: bold;
+        background-color: $color-sub-lightblue;
+        text-align: center;
+        padding: 6px;
+    }
+
+    /*當前訂單內容*/
+    .nowContent {
+        border: 4px solid;
+        border-color: $color-sub-lightblue;
+        height: auto;
+        padding: 20px;
+
+        .orderInfo {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            .orderInfoL {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                padding: 10px 0;
+            }
+
+            .condition {
+                border: 2px solid #000;
+                padding: 2px 10px;
+                margin: 2px;
+                font-weight: 600;
+                background-color: $color-sub-yellow;
+            }
+
+            .date {
+                margin-left: auto;
+                text-align: right;
+            }
+
+        }
+
+        /*用表格寫的*/
+        table {
+            border-collapse: collapse;
+            /* Remove double borders */
+            table-layout: fixed;
+            /* Ensures fixed widths for cells */
+            width: 100%;
+
+        }
+
+        td {
+
+            /*框線樣式*/
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 12px;
+        }
+
+        th {
+            padding: 10px 0;
+            font-weight: bold;
+
+        }
+
+        th,
+        td {
+
+            &.name,
+            &.content,
+            &.store {
+                text-align: left;
+                width: 250px;
+            }
+
+            &.price {
+                text-align: right;
+            }
+        }
+
+        .total {
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 30px;
+            padding: 10px 0;
+        }
+    }
+}
+
+/*訂單間分隔線*/
+.divider {
+    margin: 10px 260px;
+    height: 0.5vh;
+
+    .custom-hr {
+        border: none;
+        /* Remove default styling */
+        height: 4px;
+        /* Line thickness */
+        background: repeating-linear-gradient(to right,
+                black 0,
+                black 16px,
+                /* Length of the dash */
+                transparent 10px,
+                transparent 30px
+                /* Length of the gap */
+            );
+    }
+
+}
+
+/* 過去訂單區 */
+#pastH2 {
+    padding: 60px 260px 20px;
+
+    h2 {
+        font-size: $font-size-32;
+        font-weight: bold;
+        background-color: $color-sub-lightGray;
+        text-align: center;
+        padding: 6px;
+    }
+}
+
+.past {
+
+    padding: 0px 260px;
+
+    .pastContent {
+        .orderInfo {
+            display: flex;
+            align-items: baseline;
+            height: auto;
+            // 內縮20px
+            padding: 0 20px;
+            background-color: $color-sub-lightGray;
+
+            .orderInfoL {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                padding: 10px 0;
+            }
+
+            .condition {
+                border: 2px solid #000;
+                padding: 2px 10px;
+                margin: 2px;
+                font-weight: 600;
+                background-color: $color-sub-pink;
+            }
+
+            .date {
+                margin-left: auto;
+                text-align: right;
+            }
+
+            img {
+                padding: 6px;
+                width: 4.5%;
+                align-self: center;
+            }
+        }
+    }
+
+    .table {
+        border: 4px solid;
+        border-color: $color-sub-lightGray;
+        // 內縮20px
+        padding: 0 20px;
+
+        table {
+            padding: 20px;
+            border-collapse: collapse;
+            /* Remove double borders */
+            table-layout: fixed;
+            /* Ensures fixed widths for cells */
+            width: 100%;
+        }
+
+        td {
+            /*框線樣式*/
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 12px 0;
+        }
+
+        th {
+            padding: 10px 0;
+            font-weight: bold;
+        }
+
+        th,
+        td {
+            &.name,
+            &.content,
+            &.store {
+                text-align: left;
+                width: max-content;
+                padding-right: 10px;
+            }
+
+            &.price {
+                text-align: right;
+            }
+        }
+
+        .total {
+            font-weight: bold;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 30px;
+            padding: 10px 0;
+        }
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    //訂單結束分隔空間
+    .all {
+        padding: 20px;
+    }
+}
+
+//所有訂單結束 
+#all {
+    padding: 60px;
+    background-color: beige;
+}
+
+/* 頁尾區 */
+#footer {
+    display: flex;
+    /* 主軸方向:水平 */
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 25px 70px;
+    background-color: $color-primary-blue;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    font-family: $font-family-ch;
+    font-size: $font-size-16;
+    font-weight: 600;
+    color: $color-primary-white;
+    letter-spacing: 0.05rem;
+
+    .logoFooter {
+        .logoFooterImg {
+            width: 80px;
+            padding: 5px 0px;
+        }
+
+        .logoFooterText {
+            width: 200px;
+            padding-bottom: 15px;
+        }
+    }
+
+    .articleFooter {
+        li {
+            margin-bottom: 15px;
+
+            p {
+                margin-bottom: 5px;
+            }
+        }
+
+        .iconFooter {
+            display: flex;
+
+            img {
+                width: 30px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+section {
+    height: auto;
+    @extend %box-center;
+    flex-direction: column;
+}

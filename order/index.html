@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun飲Lab | 訂單管理</title>
+    <!-- favicon 可省略不寫 1x=16px,3x=48px -->
+    <!-- <link rel="icon" href="./favicon.ico"> -->
+    <!-- 自訂的CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+
+    <!-- 頁首區 -->
+    <header id="topBar">
+        <!-- logo區 -->
+        <h1 class="logo">
+            <a href="./index.html">
+                <!-- svg預設會自動寬度100% -->
+                <img src="" alt="" title="" />
+            </a>
+        </h1>
+        <!-- 導覽列 -->
+        <nav class="navigation">
+            <!-- 主選單 -->
+            <ul class="menu">
+                <li><a href="">STORY</a></li>
+                <li><a href="">MENU</a></li>
+                <li><a href="">FRESH</a></li>
+                <li><a hr≠ef="">STORE</a></li>
+                <li><a href="">SEARCH</a></li>
+            </ul>
+            <ul>
+                <a href="" class="funLab">
+                    <li><img src="./images/logo.svg" alt="" /></li>
+                    <li>FUN LAB</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <!-- 主要內容區 -->
+    <main>
+        <header class="title">
+            <h1>訂單管理</h1>
+        </header>
+        <!-- 當前訂單 -->
+        <div class="now">
+            <header class="title">
+                <h2>當前訂單</h2>
+            </header>
+            <!-- 當前訂單內容 -->
+            <div class="nowContent">
+                <!-- 訂單編號 -->
+                <div class="orderInfo">
+                    <div class="orderInfoL">
+                        <p>訂單編號：313286</p>
+                        <div class="condition">飲品製作中</div>
+                    </div>
+                    <div class="date">
+                        <p>訂單日：2025/01/17</p>
+                    </div>
+                </div>
+                <!-- 訂單資訊  -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="name">商品名稱</th>
+                            <th class="content">內容</th>
+                            <th class="store">取件門市</th>
+                            <th class="price">價格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="name">極上珍珠奶茶</td>
+                            <td class="content">奶茶／鮮奶／珍珠</td>
+                            <td class="store">台北商業大學門市</td>
+                            <td class="price">$ 70</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- 訂單總金額 -->
+                <div class="total">
+                    <p>訂單總金額</p>
+                    <p>$ 70</p>
+                </div>
+            </div>
+            <!-- 當前訂單結束 -->
+        </div>
+
+        <!-- 分隔線 -->
+        <div class="divider">
+            <hr class="custom-hr">
+        </div>
+
+        <!-- 過去訂單區 -->
+        <header id="pastH2">
+            <h2>過去訂單</h2>
+        </header>
+
+        <!-- 過去訂單內容1 -->
+        <div class="past">
+            <div class="pastContent">
+                <div class="orderInfo">
+                    <div class="orderInfoL">
+                        <p>訂單編號：312643</p>
+                        <div class="condition">已完成</div>
+                    </div>
+                    <div class="date">
+                        <p>訂單日：2024/12/12</p>
+                    </div>
+                    <img src="./images/icon-downtriangle.svg" alt="" class="tri">
+                </div>
+                <!-- 訂單資訊  -->
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="name">商品名稱</th>
+                                <th class="content">內容</th>
+                                <th class="store">取件門市</th>
+                                <th class="price">價格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="name">好喝抹茶杏仁奶</td>
+                                <td class="content">抹茶／杏仁奶</td>
+                                <td class="store">善導寺門市</td>
+                                <td class="price">$ 60</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 訂單總金額 -->
+                    <div class="total">
+                        <p>訂單總金額</p>
+                        <p>$ 60</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 分隔一下 -->
+            <div class="all">
+            </div>
+        </div>
+        <!-- 過去訂單內容2 -->
+        <div class="past">
+            <div class="pastContent">
+                <!-- 訂單編號 -->
+                <div class="orderInfo">
+                    <div class="orderInfoL">
+                        <p>訂單編號：312637</p>
+                        <div class="condition">已完成</div>
+                    </div>
+                    <div class="date">
+                        <p>訂單日：2024/12/05</p>
+                    </div>
+                    <img src="./images/icon-downtriangle.svg" alt="" class="tri">
+                </div>
+                <!-- 訂單資訊  -->
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="name">商品名稱</th>
+                                <th class="content">內容</th>
+                                <th class="store">取件門市</th>
+                                <th class="price">價格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="name">放飲特調 no. 666的不知道不明瞭不想要為什麼我的心</td>
+                                <td class="content">金萱／杏仁奶／茶凍／咖啡凍</td>
+                                <td class="store">善導寺門市</td>
+                                <td class="price">$ 60</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 訂單總金額 -->
+                    <div class="total">
+                        <p>訂單總金額</p>
+                        <p>$ 60</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 分隔一下 -->
+            <div class="all">
+            </div>
+        </div>
+        <!-- 過去訂單內容3 -->
+        <div class="past">
+            <div class="pastContent">
+                <!-- 訂單編號 -->
+                <div class="orderInfo">
+                    <div class="orderInfoL">
+                        <p>訂單編號：312601</p>
+                        <div class="condition">已完成</div>
+                    </div>
+                    <div class="date">
+                        <p>訂單日：2024/12/01</p>
+                    </div>
+                    <img src="./images/icon-downtriangle.svg" alt="" class="tri">
+                </div>
+                <!-- 訂單資訊  -->
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="name">商品名稱</th>
+                                <th class="content">內容</th>
+                                <th class="store">取件門市</th>
+                                <th class="price">價格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="name">乓乓乓</td>
+                                <td class="content">乓乓乓</td>
+                                <td class="store">乓乓乓</td>
+                                <td class="price">$ 60</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 訂單總金額 -->
+                    <div class="total">
+                        <p>訂單總金額</p>
+                        <p>$ 60</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 分隔一下 -->
+            <div class="all">
+            </div>
+        </div>
+
+
+        <!-- 過去訂單內容4 -->
+        <div class="past">
+            <div class="pastContent">
+                <!-- 訂單編號 -->
+                <div class="orderInfo" onclick="pastOrder()">
+                    <div class="orderInfoL">
+                        <p>訂單編號：444444</p>
+                        <div class="condition">已完成</div>
+                    </div>
+                    <div class="date">
+                        <p>訂單日：2024/12/17</p>
+                    </div>
+                    <img src="./images/icon-righttriangle.svg" alt="" class="tri">
+                    <img src="./images/icon-downtriangle.svg" alt="" class="tri hidden">
+
+                </div>
+                <!-- 訂單資訊  -->
+                <div id="expanded" class="table hidden">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="name">商品名稱</th>
+                                <th class="content">內容</th>
+                                <th class="store">取件門市</th>
+                                <th class="price">價格</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="name">乓乓乓</td>
+                                <td class="content">乓乓乓</td>
+                                <td class="store">乓乓乓</td>
+                                <td class="price">$ 60</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- 訂單總金額 -->
+                    <div class="total">
+                        <p>訂單總金額</p>
+                        <p>$ 60</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 分隔一下 -->
+            <div class="all">
+            </div>
+        </div>
+
+
+
+        <!-- 過去訂單折疊-->
+        <div class="past">
+            <div class="pastContent">
+                <!-- 訂單編號 -->
+                <div class="orderInfo">
+                    <div class="orderInfoL">
+                        <p>訂單編號：312643</p>
+                        <div class="condition">已完成</div>
+                    </div>
+                    <div class="date">
+                        <p>訂單日：2024/12/12</p>
+                    </div>
+                    <img src="./images/icon-righttriangle.svg" alt="" class="tri">
+                </div>
+                <!-- 分隔一下 -->
+                <div class="all">
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- 所有訂單結束 -->
+        <div id="all">
+        </div>
+    </main>
+
+    <!-- 頁尾區 -->
+    <footer id="footer">
+        <div class="logoFooter">
+            <img class="logoFooterImg" src="./images/funLogo.svg" alt="fun飲LOGONav" />
+            <img class="logoFooterText" src="./images/funLogoText2.svg" alt="fun飲LOGO" title="fun飲LOGO" />
+        </div>
+        <div class="articleFooter">
+            <ul>
+                <li>
+                    <p>CONTACT</p>
+                </li>
+                <li>
+                    <p>PRIVACY POLICY</p>
+                </li>
+                <li>
+                    <p>放飲 FUN LAB</p>
+                    <p>100台北市中正區濟南路一段321號</p>
+                    <p>TEL 02-3535-3466</p>
+                </li>
+                <li class="iconFooter">
+                    <img src="./images/icon/icon-ig-hover.svg" alt="" />
+                    <img src="./images/icon/icon-line-hover.svg" alt="" />
+                </li>
+                <li>
+                    <p>©2024 放飲, All Rights Reserved</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- 程式 -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
