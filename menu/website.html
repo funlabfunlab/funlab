@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun飲Lab | Menu</title>
+    <!-- favicon 可省略不寫 1x=16px,3x=48px -->
+    <!-- <link rel="icon" href="./favicon.ico"> -->
+    <!-- 自訂的CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header id="topBar">
+        <!-- logo區 -->
+        <h1 class="logo">
+            <a href="./index.html">
+                <!-- svg預設會自動寬度100% -->
+                <img src="" alt="" title="" />
+            </a>
+        </h1>
+        <!-- 導覽列 -->
+        <nav class="navigation">
+            <!-- 主選單 -->
+            <ul class="menu">
+                <li><a href="">STORY</a></li>
+                <li><a href="">MENU</a></li>
+                <li><a href="">FRESH</a></li>
+                <li><a hr≠ef="">STORE</a></li>
+                <li><a href="">SEARCH</a></li>
+            </ul>
+            <ul>
+                <a href="" class="funLab">
+                    <li><img src="./images/logo.svg" alt="" /></li>
+                    <li>FUN LAB</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <!-- 主要內容 -->
+    <!--banner輪播區-->
+    <div id="banner-wrap">
+        <div class="banner">
+            <div class="item"><img src="./images/banner/fruittea.jpg" alt="fruit-tea-banner"></div>
+            <div class="item"><img src="./images/banner/milk.jpg" alt="milk-banner"></div>
+            <div class="item"><img src="./images/banner/milktea.jpg" alt="milktea-banner"></div>
+            <div class="item"><img src="./images/banner/puretea.jpg" alt="puretea-banner"></div>
+            <div class="item"><img src="./images/banner/topping.jpg" alt="topping-banner"></div>
+        </div>
+    </div>
+
+    <!-- 菜單區 -->
+    <section class="menu">
+        <div>
+            <!-- 加入menu 文字圖檔 -->
+            <h2>
+                <img src="./images/graph/menu.svg" alt="menu" title="menu">
+            </h2>
+        </div>
+
+        <!-- 加入分組頁籤 -->
+        <div class="drinkListTab">
+            <ul>
+                <li><a class="tab-btn active" data-target="pureteaDrink">放飲純茶</a></li>
+                <li><a class="tab-btn" data-target="toppingDrink">FUN新嚼感</a></li>
+                <li><a class="tab-btn" data-target="milkDrink">濃醇鮮奶</a></li>
+                <li><a class="tab-btn" data-target="milkteaDrink">植物奶茶</a></li>
+                <li><a class="tab-btn" data-target="fruitteaDrink">鮮調果粒</a></li>
+            </ul>
+        </div>
+
+        <!-- 飲料分組區塊 -->
+        <div class="drinkListTab">
+            <!-- 放飲純茶 頁籤對應用 -->
+            <div id="pureteaDrink" class="listbox">
+                <!-- 放飲純茶 商品區 -->
+                <div class="productlist">
+                    <!-- 碧螺春 -->
+                    <div class="product" title="birouchun">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/birouchun.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                碧螺春&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            碧螺春碧螺春碧螺春碧螺春碧螺春碧螺春
+                        </p>
+                    </div>
+
+                    <!-- 金萱 -->
+                    <div class="product" title="gold">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/gold.webp" />
+                        </div>
+
+
+                        <div class="drinkText">
+                            <h2>
+                                金萱&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱
+                        </p>
+                    </div>
+
+                    <!-- 煎茶 -->
+                    <div class="product" title="japan">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/japan.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                煎茶&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            煎茶煎茶煎茶煎茶煎茶煎茶煎茶煎茶煎茶煎茶
+                        </p>
+                    </div>
+                    <!-- 東方美人 -->
+                    <div class="product" title="orient">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/orient.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                東方美人&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            東方美人東方美人東方美人東方美人東方美人
+                        </p>
+                    </div>
+                    <!-- 四季春 -->
+                    <div class="product" title="season">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/season.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                四季春&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            四季春四季春四季春四季春四季春四季春四季春四季春四季春
+                        </p>
+                    </div>
+                    <!-- 舞鶴 -->
+                    <div class="product" title="wuhe">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/wuhe.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                舞鶴&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            舞鶴舞鶴舞鶴舞鶴舞鶴舞鶴
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 放飲純茶 商品區結束 -->
+
+            <!-- FUN新嚼感 頁籤對應用 -->
+            <div id="toppingDrink" class="listbox">
+                <!-- FUN新嚼感 商品區 -->
+                <div class="productlist">
+                    <!-- 椰薩歐蕾 -->
+                    <div class="product" title="yeahsa">
+                        <div class="drinkImage">
+                            <img src="./images/toppings/yeahsa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                椰薩歐蕾&emsp; <span>$65</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            黃金比例的阿薩姆鮮奶茶，搭配椰果嚼勁十足
+                        </p>
+                    </div>
+
+                    <!-- 烏波歐蕾 -->
+                    <div class="product" title="wupo">
+                        <div class="drinkImage">
+                            <img src="./images/toppings/yeahsa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                烏波歐蕾&emsp; <span>$55</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            烏龍與鮮奶香氣交織，每一口都有波霸加分
+                        </p>
+                    </div>
+
+                    <!-- 芋遇金萱 -->
+                    <div class="product" title="taroyu">
+                        <div class=" drinkImage">
+                            <img src="./images/toppings/yeahsa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                芋遇金萱&emsp; <span>$65</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            綿密芋圓口感，更能提升金萱茶香
+                        </p>
+                    </div>
+                    <!-- 粿玉歐蕾 -->
+                    <div class="product" title="oyu">
+                        <div class="drinkImage">
+                            <img src="./images/toppings/yeahsa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                粿玉歐蕾&emsp; <span>$60</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            粉粿與鮮奶綠的完美組合
+                        </p>
+                    </div>
+                    <!-- 凍蘭燕奶 -->
+                    <div class="product" title="donran">
+                        <div class="drinkImage">
+                            <img src="./images/toppings/yeahsa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                凍蘭燕奶&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            植物奶搭配清茶與茶凍的雙重享受
+                        </p>
+                    </div>
+                    <!-- 珍珠豆舞奶 -->
+                    <div class="product" title="bobado">
+                        <div class="drinkImage">
+                            <img src="./images/toppings/yeahsa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                珍珠豆舞奶&emsp; <span>$55</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            豆漿紅茶加珍珠的經典重現
+                        </p>
+                    </div>
+                    <!-- 仙農奶 -->
+                    <div class="product" title="shenlong">
+                        <div class="drinkImage">
+                            <img src="./images/toppings/yeahsa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                仙農奶&emsp; <span>$50</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            仙農奶仙農奶仙農奶仙農奶仙農奶仙農奶仙農奶仙農奶仙農奶仙農奶仙農奶仙農奶仙農奶
+                        </p>
+                    </div>
+                    <!-- 3Q紅玉 -->
+                    <div class="product" title="3Q">
+                        <div class="drinkImage">
+                            <img src="./images/toppings/yeahsa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                3Q紅玉&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            3Q紅玉3Q紅玉3Q紅玉3Q紅玉3Q紅玉3Q紅玉3Q紅玉3Q紅玉
+                        </p>
+                    </div>
+                    <!-- 凍美歐蕾 -->
+                    <div class="product" title="donmei">
+                        <div class="drinkImage">
+                            <img src="./images/toppings/yeahsa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                凍美歐蕾&emsp; <span>$55</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            凍美歐蕾凍美歐蕾凍美歐蕾凍美歐蕾凍美歐蕾凍美歐蕾
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- FUN新嚼感 商品區結束 -->
+
+            <!-- 濃醇鮮奶 頁籤對應用 -->
+            <div id="milkDrink" class="listbox">
+                <!-- 濃醇鮮奶 商品區 -->
+                <div class="productlist">
+                    <!-- 紅玉歐蕾 -->
+                    <div class="product" title="redjadeo">
+                        <div class="drinkImage">
+                            <img src="./images/milktea/redjadeo.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                紅玉歐蕾&emsp; <span>$50</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            紅玉歐蕾紅玉歐蕾紅玉歐蕾紅玉歐蕾紅玉歐蕾紅玉歐蕾
+                        </p>
+                    </div>
+
+                    <!-- 美人歐蕾 -->
+                    <div class="product" title="beauty">
+                        <div class="drinkImage">
+                            <img src="./images/milktea/beauty.webp" />
+                        </div>
+
+
+                        <div class="drinkText">
+                            <h2>
+                                美人歐蕾&emsp; <span>$55</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            美人歐蕾美人歐蕾美人歐蕾美人歐蕾美人歐蕾美人歐蕾
+                        </p>
+                    </div>
+
+                    <!-- 金萱歐蕾 -->
+                    <div class="product" title="goldo">
+                        <div class="drinkImage">
+                            <img src="./images/milktea/goldo.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                金萱歐蕾&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            金萱歐蕾金萱歐蕾金萱歐蕾金萱歐蕾金萱歐蕾金萱歐蕾
+                        </p>
+                    </div>
+                    <!-- 玉露歐蕾 -->
+                    <div class="product" title="yuru">
+                        <div class="drinkImage">
+                            <img src="./images/milktea/yuru.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                玉露歐蕾&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            玉露歐蕾玉露歐蕾玉露歐蕾玉露歐蕾玉露歐蕾玉露歐蕾
+                        </p>
+                    </div>
+                    <!-- 四季歐蕾 -->
+                    <div class="product" title="seasono">
+                        <div class="drinkImage">
+                            <img src="./images/milktea/seasono.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                四季歐蕾&emsp; <span>$40</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            四季歐蕾四季歐蕾四季歐蕾四季歐蕾四季歐蕾
+                        </p>
+                    </div>
+                    <!-- 舞鶴歐蕾 -->
+                    <div class="product" title="wuheo">
+                        <div class="drinkImage">
+                            <img src="./images/milktea/wuheo.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                舞鶴歐蕾&emsp; <span>$60</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            舞鶴歐蕾舞鶴歐蕾舞鶴歐蕾舞鶴歐蕾舞鶴歐蕾
+                        </p>
+                    </div>
+                    <!-- 碧螺春歐蕾 -->
+                    <div class="product" title="birouchuno">
+                        <div class="drinkImage">
+                            <img src="./images/milktea/birouchuno.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                碧螺春歐蕾&emsp; <span>$60</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            碧螺春歐蕾碧螺春歐蕾碧螺春歐蕾碧螺春歐蕾碧螺春歐蕾
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 濃醇鮮奶 商品區結束 -->
+
+            <!-- 植物奶茶 頁籤對應用 -->
+            <div id="milkteaDrink" class="listbox">
+                <!-- 植物奶茶 商品區 -->
+                <div class="productlist">
+                    <!-- 紅燕奶 -->
+                    <div class="product" title="redyen">
+                        <div class="drinkImage">
+                            <img src="./images/plantmilk/redyen.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                紅燕奶&emsp; <span>$55</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            紅玉搭配100%燕麥奶，香甜紅玉茶香與燕麥交織的美好
+                        </p>
+                    </div>
+
+                    <!-- 烏燕奶 -->
+                    <div class="product" title="wuyen">
+                        <div class="drinkImage">
+                            <img src="./images/plantmilk/wuyen.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                烏燕奶&emsp; <span>$45</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            烏燕奶烏燕奶烏燕奶烏燕奶烏燕奶烏燕奶
+                        </p>
+                    </div>
+
+                    <!-- 金燕奶 -->
+                    <div class="product" title="goldyen">
+                        <div class="drinkImage">
+                            <img src="./images/plantmilk/goldyen.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                金燕奶&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            金燕奶金燕奶金燕奶金燕奶金燕奶金燕奶
+                        </p>
+                    </div>
+                    <!-- 嘻嘻麥來 -->
+                    <div class="product" title="mairai">
+                        <div class="drinkImage">
+                            <img src="./images/plantmilk/mairai.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                嘻嘻麥來&emsp; <span>$50</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            嘻嘻麥來嘻嘻麥來嘻嘻麥來嘻嘻麥來
+                        </p>
+                    </div>
+                    <!-- 豆薩奶 -->
+                    <div class="product" title="dosa">
+                        <div class="drinkImage">
+                            <img src="./images/plantmilk/dosa.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                豆薩奶&emsp; <span>$45</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            豆薩奶豆薩奶豆薩奶豆薩奶豆薩奶豆薩奶
+                        </p>
+                    </div>
+                    <!-- 豆好鶴 -->
+                    <div class="product" title="dohowhe">
+                        <div class="drinkImage">
+                            <img src="./images/plantmilk/dohowhe.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                豆好鶴&emsp; <span>$60</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            豆好鶴豆好鶴豆好鶴豆好鶴豆好鶴
+                        </p>
+                    </div>
+                    <!-- 豆趣雙享 -->
+                    <div class="product" title="dochu">
+                        <div class="drinkImage">
+                            <img src="./images/plantmilk/dochu.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                豆趣雙享&emsp; <span>$55</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            豆趣雙享豆趣雙享豆趣雙享豆趣雙享豆趣雙享
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 植物奶茶 商品區結束 -->
+
+            <!-- 鮮調果粒 頁籤對應用 -->
+            <div id="fruitteaDrink" class="listbox">
+                <!-- 鮮調果粒 商品區 -->
+                <div class="productlist">
+                    <!-- 碧螺春 -->
+                    <div class="product" title="birouchun">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/birouchun.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                碧螺春&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            碧螺春碧螺春碧螺春碧螺春碧螺春碧螺春
+                        </p>
+                    </div>
+
+                    <!-- 金萱 -->
+                    <div class="product" title="gold">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/gold.webp" />
+                        </div>
+
+
+                        <div class="drinkText">
+                            <h2>
+                                金萱&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱金萱
+                        </p>
+                    </div>
+
+                    <!-- 煎茶 -->
+                    <div class="product" title="japan">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/japan.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                煎茶&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            煎茶煎茶煎茶煎茶煎茶煎茶煎茶煎茶煎茶煎茶
+                        </p>
+                    </div>
+                    <!-- 東方美人 -->
+                    <div class="product" title="orient">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/orient.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                東方美人&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            東方美人東方美人東方美人東方美人東方美人
+                        </p>
+                    </div>
+                    <!-- 四季春 -->
+                    <div class="product" title="season">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/season.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                四季春&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            四季春四季春四季春四季春四季春四季春四季春四季春四季春
+                        </p>
+                    </div>
+                    <!-- 舞鶴 -->
+                    <div class="product" title="wuhe">
+                        <div class="drinkImage">
+                            <img src="./images/puretea/wuhe.webp" />
+                        </div>
+                        <div class="drinkText">
+                            <h2>
+                                舞鶴&emsp; <span>$35</span>
+                            </h2>
+                        </div>
+                        <p class="drinkInfo">
+                            舞鶴舞鶴舞鶴舞鶴舞鶴舞鶴
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 鮮調果粒 商品區結束 -->
+        </div>
+        <!-- 裝飾物件 -->
+        <!-- <figure id="graph-line-pink"><img src="./images/graph/graph-line-pink.svg" alt="粉色線條裝飾"></figure>
+        <figure id="graph-line-yellow"><img src="./images/graph/graph-line-yellow.svg" alt="黃色線條裝飾"></figure>
+        <figure id="graph-sun-pink"><img src="./images/graph/graph-sun-pink.svg" alt="粉色太陽裝飾"></figure> -->
+    </section>
+
+
+    <!-- 頁尾區 -->
+    <footer id="footer">
+        <div class="logoFooter">
+            <img class="logoFooterImg" src="./images/funLogo.svg" alt="fun飲LOGONav" />
+            <img class="logoFooterText" src="./images/funLogoText2.svg" alt="fun飲LOGO" title="fun飲LOGO" />
+        </div>
+        <div class="articleFooter">
+            <ul>
+                <li>
+                    <p>CONTACT</p>
+                </li>
+                <li>
+                    <p>PRIVACY POLICY</p>
+                </li>
+                <li>
+                    <p>放飲 FUN LAB</p>
+                    <p>100台北市中正區濟南路一段321號</p>
+                    <p>TEL 02-3535-3466</p>
+                </li>
+                <li class="iconFooter">
+                    <img src="./images/icon/icon-ig-hover.svg" alt="" />
+                    <img src="./images/icon/icon-line-hover.svg" alt="" />
+                </li>
+                <li>
+                    <p>©2024 放飲, All Rights Reserved</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- 程式 -->
+    <script src="./javascript/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

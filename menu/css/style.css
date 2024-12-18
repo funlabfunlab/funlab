@@ -198,47 +198,6 @@ a {
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
-.subNavigation {
-  position: fixed;
-  top: 25%;
-  left: 50px;
-  z-index: 1000;
-  display: flex;
-  width: 130px;
-}
-.subNavigation img {
-  width: 43px;
-  margin-right: 8px;
-}
-.subNavigation .subMenu {
-  padding-top: 45px;
-}
-.subNavigation .subMenu a {
-  position: relative;
-  width: fit-content;
-  margin-bottom: 44px;
-  font-family: "Mulish";
-  font-size: 0.75rem;
-  font-weight: 900;
-  font-style: italic;
-}
-.subNavigation .subMenu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  /* 初始寬度為 0 */
-  height: 2px;
-  background-color: #000;
-  transition: width 0.2s ease;
-  /* 添加過渡效果 */
-}
-.subNavigation .subMenu a:hover::after {
-  width: 100%;
-  /* 當滑鼠移到標題時，底線展開至全寬 */
-}
-
 /*主要內容區*/
 /* banner輪播區 */
 #banner-wrap .banner {
@@ -246,26 +205,6 @@ a {
   padding-top: 130px;
   height: 100%;
   min-height: 370px;
-}
-
-/*側邊導覽列*/
-.nav > div {
-  margin-top: -26px;
-  position: absolute;
-  top: 50%;
-  color: #cdcbcd;
-}
-
-.nav i {
-  font-size: 52px;
-}
-
-.nav .prev {
-  left: -30px;
-}
-
-.nav .next {
-  right: -30px;
 }
 
 /*菜單區*/
@@ -280,15 +219,16 @@ a {
 .menu {
   z-index: 999;
   /*分組頁籤*/
+  /*裝飾物件*/
 }
 .menu h2 {
   display: flex;
   justify-content: center;
-  padding: 62px;
+  padding: 40px;
+  font-size: 1.25rem;
 }
 .menu h2 img {
-  width: 100%;
-  max-width: 290px;
+  width: 25%;
 }
 .menu .drinkListTab ul {
   display: flex;
@@ -307,6 +247,7 @@ a {
   font-size: 22px;
   padding: 10px 20px;
   background: transparent;
+  transition: 0.5s;
 }
 .menu .drinkListTab ul li .tab-btn:hover {
   background-color: #e8e8e8;
@@ -319,42 +260,58 @@ a {
   border-radius: 50px;
   color: #ffffff;
 }
-.menu #graph-sun-pink {
-  width: 90px;
-  position: absolute;
-  left: 300px;
-  bottom: -50px;
-  transform: rotate(30deg);
-}
-.menu #graph-line-yellow {
-  width: 160px;
-  position: absolute;
-  top: 1490px;
-  right: 100px;
-  transform: rotate(-20deg);
-}
-.menu #graph-line-pink {
-  width: 320px;
-  position: absolute;
-  top: 1000px;
-  left: -40px;
-  transform: rotate(30deg);
-}
 
 /*分組商品區*/
 .productlist {
-  padding: 40px;
+  min-height: 120vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* Add some spacing between items */
+  z-index: 995;
 }
 .productlist .product {
   margin: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* Smooth transition */
 }
-.productlist .product h2 {
-  text-align: center;
+.productlist .product:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+  /* Reduce opacity for a subtle effect */
+}
+.productlist .drinkText {
   position: relative;
-  text-decoration: none;
-  color: inherit;
+  text-align: center;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for scaling and opacity */
+}
+.productlist .drinkText::before {
+  content: "";
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 10px;
+  background-color: #B3C7FD; /* Default blue color */
+  opacity: 80%;
+  z-index: 1;
+  transition: background-color 0.5s ease; /* Smooth color transition */
+}
+.productlist .drinkText:hover {
+  transform: scale(1.08);
+  opacity: 0.9; /* Subtle opacity effect */
+}
+.productlist .drinkText:hover::before {
+  background-color: #FAB4F0; /* Change to pink */
+}
+.productlist .drinkText h2 {
+  position: relative;
+  font-weight: 500;
+  z-index: 2;
+}
+.productlist .drinkText p {
+  height: auto;
 }
 
 /* 頁尾區 */
@@ -372,6 +329,7 @@ a {
   font-weight: 600;
   color: #FFFFFF;
   letter-spacing: 0.05rem;
+  bottom: 0;
 }
 #footer .logoFooter .logoFooterImg {
   width: 80px;
@@ -396,6 +354,6 @@ a {
 }
 
 section {
-  height: 100vh;
+  height: auto;
   flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
